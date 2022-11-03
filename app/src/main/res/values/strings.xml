@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MusicoletFake</string>
+    <string name="song_list">Song List</string>
+    <string name="no_songs_found">NO SONGS FOUND</string>
+    <string name="song_title">Song Title</string>
+    <string name="_0_00">0:00</string>
+    <string name="_0_000">0:00</string>
+</resources>
