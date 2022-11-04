@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -79,5 +80,11 @@ public class MainActivity extends AppCompatActivity {
         if(recyclerView!=null){
             recyclerView.setAdapter(new MusicAdapter(songsList,getApplicationContext()));
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this, MyService.class));
     }
 }
