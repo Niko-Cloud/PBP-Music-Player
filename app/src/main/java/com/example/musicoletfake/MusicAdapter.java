@@ -42,6 +42,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder>{
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                context.startService(new Intent(context, MyService.class));
                 MusicPlayer.getInstance().reset();
                 MusicPlayer.currentIndex = position;
                 Intent intent = new Intent(context,NextActivity.class);

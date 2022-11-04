@@ -120,6 +120,7 @@ public class NextActivity extends AppCompatActivity {
     }
 
     private void pausePlay(){
+        onPause();
         if(mediaPlayer.isPlaying())
             mediaPlayer.pause();
         else
